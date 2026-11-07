@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Miraz Al Hyder | Robotics &amp; CSE Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--acc:#e5603b;--acc2:#8a2f18;--bg:#fff;--ink:#1d1d1d;--muted:#5d5d5d;--card:#f2f2f2;--line:#e3e3e3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.dk{--bg:#1d1d1d;--ink:#fff;--muted:#b9b9b9;--card:#2b2b2b;--line:#3a3a3a}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:#fff;color:#1d1d1d;font:17px/1.7 Inter,system-ui,sans-serif}
+h1,h2,h3,.disp{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;margin:0;line-height:1.05;letter-spacing:.01em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+#bar{position:fixed;top:0;left:0;height:4px;width:0;background:var(--acc);z-index:40}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:#1d1d1d;color:#fff;z-index:30}
+nav .wrap{display:flex;align-items:center;gap:26px;height:68px;overflow-x:auto;white-space:nowrap}
+nav .brand{font:400 26px Anton,sans-serif;letter-spacing:.02em;margin-right:auto;text-decoration:none;color:#fff}
+nav .brand i{color:var(--acc);font-style:normal}
+nav a.l{color:#fff;text-decoration:none;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
+nav a.l:hover{color:var(--acc)}
+.talk{display:inline-flex;border:1px solid #444;color:#fff;text-decoration:none;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-left:auto}
+.talk span{padding:12px 20px}.talk b{background:var(--acc);padding:12px 15px;transition:transform .25s}.talk:hover b{transform:translateX(4px)}
+@media(min-width:900px){nav .brand{margin-right:0}.talk{margin-left:0}nav .wrap{justify-content:space-between}}
+.hero{background:#1d1d1d;color:#fff;overflow:hidden;padding:56px 0 0}
+.hero .g{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center;padding-bottom:clamp(56px,9vw,130px)}
+@media(max-width:820px){.hero .g{grid-template-columns:1fr}}
+.tag{display:inline-flex;gap:9px;align-items:center;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--acc)}
+.hero h1{font-size:clamp(38px,6.2vw,74px);margin:20px 0 18px;max-width:11em}
+.hero p{color:#c9c9c9;max-width:50ch;margin:0 0 28px}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:0 0 0 22px;border:1px solid #fff;color:#fff;background:transparent;font:700 12.5px Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:.25s}
+.btn b{background:var(--acc);padding:15px 16px;font-size:15px;transition:transform .25s}
+.btn:hover{border-color:var(--acc)}.btn:hover b{transform:translateX(4px)}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.circ{position:relative;width:min(430px,86vw);aspect-ratio:1;margin:0 auto;border-radius:50%;background:linear-gradient(165deg,#f0714a,var(--acc2) 90%);overflow:hidden}
+.circ .ph{position:absolute;inset:0;aspect-ratio:auto;background:transparent;color:#ffe5dc;font:600 13px/1.4 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.big{font:400 clamp(54px,13.4vw,176px)/.95 Anton,sans-serif;text-transform:uppercase;color:#d9d9d9;text-align:center;margin:-.34em 0 0;position:relative;z-index:2;white-space:nowrap;letter-spacing:.01em;pointer-events:none}
+.in{opacity:0;transform:translateY(24px);animation:in .8s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes in{to{opacity:1;transform:none}}
+section{padding:92px 0}
+.dk.sec{background:#1d1d1d;color:#fff}
+.gr{background:#f2f2f2}
+.eyebrow{display:inline-flex;gap:9px;align-items:center;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink)}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--acc)}
+h2.t{font-size:clamp(34px,5.6vw,64px);margin:14px 0 12px;color:var(--ink)}
+.sub{color:var(--muted);max-width:62ch;margin:0 0 44px}
+.pills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:60px 0 0}
+.pill{border:1px solid var(--line);border-radius:44px;padding:24px 28px;box-shadow:0 10px 30px rgba(0,0,0,.05);background:#fff}
+.pill b{display:block;font:400 56px/1 Anton,sans-serif;color:var(--acc)}
+.pill span{display:block;font-size:14px;color:#5d5d5d;line-height:1.5;margin-top:8px}
+.two{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
+@media(max-width:820px){.two{grid-template-columns:1fr}}
+.two p{margin:0 0 16px;color:var(--muted)}
+.quote{background:#1d1d1d;color:#fff;padding:36px 30px;text-align:center;box-shadow:12px 12px 0 var(--acc)}
+.quote i{display:block;font:400 76px/1 Anton,sans-serif;color:var(--acc);font-style:normal}
+.quote h3{font-size:26px;line-height:1.3;text-transform:none;font-family:Anton,sans-serif}
+.quote small{display:block;margin-top:18px;font-size:12px;letter-spacing:.1em;font-weight:700;color:#b9b9b9}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:26px}
+.card{background:var(--card);display:flex;flex-direction:column;transition:transform .35s,box-shadow .35s;border-bottom:4px solid transparent}
+.card:hover{transform:translateY(-8px);box-shadow:0 22px 40px rgba(0,0,0,.18);border-color:var(--acc)}
+.card.feat{grid-column:1/-1}
+@media(min-width:780px){.card.feat{flex-direction:row;align-items:stretch}.card.feat .pw{width:48%;flex:none}.card.feat .cb{display:flex;flex-direction:column;justify-content:center;padding:34px}}
+.ph{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;background:repeating-linear-gradient(135deg,rgba(229,96,59,.12) 0 12px,transparent 12px 24px),var(--line);color:var(--muted);cursor:pointer;overflow:hidden;text-align:center;font:700 12px/1.5 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.card.feat .ph{height:100%;min-height:260px}
+.ph input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .ph img{transform:scale(1.05)}
+.ph.has span{display:none}
+.gal{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px 14px;background:var(--card)}
+.card.feat .pw{display:flex;flex-direction:column}.card.feat .pw .ph{flex:1}
+.addmore{position:relative;cursor:pointer;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--acc)}
+.addmore input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%}
+.th{width:40px;height:30px;border:0;background-size:cover;background-position:center;cursor:pointer;padding:0}
+.cb{padding:6px 24px 28px}
+.cb h3{font-size:27px;color:var(--ink)}
+.cb .m{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:10px 0}
+.cb p{margin:0;color:var(--muted);font-size:15.5px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}
+.rv.show{opacity:1;transform:none}
+.cta h2{font-size:clamp(44px,8.4vw,112px);color:#fff;max-width:9em}
+.cta p{color:#c9c9c9;max-width:56ch;margin:22px 0 32px}
+footer{background:#111;color:#9a9a9a;font-size:13px;text-align:center;padding:26px 0}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.in,.rv{opacity:1;transform:none}}
+.edbar{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));display:flex;gap:8px;z-index:70}
+.edbar button{padding:12px 18px;border:0;background:var(--acc);color:#fff;font:700 13px Inter,sans-serif;letter-spacing:.05em;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.edbar button.g{background:#1d1d1d}
+[contenteditable=true]{outline:2px dashed var(--acc);outline-offset:3px;cursor:text}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav><div class="wrap"><a class="brand" href="#top">MIRAZ<i>.</i></a><a class="l" href="#about">My story</a><a class="l" href="#projects">Projects</a><a class="l" href="#cad">CAD designs</a><a class="l" href="#awards">Awards</a><a class="l" href="#experience">Experience</a><a class="l" href="#volunteering">Giving back</a><a class="l" data-ext href="https://www.linkedin.com/in/miraz-al-hyder-609492351" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="talk" href="#contact"><span>Let's talk</span><b>&rarr;</b></a></div></nav>
+<header class="hero" id="top"><div class="wrap">
+<div class="g">
+<div>
+<span class="tag in">CSE student</span>
+<h1 class="in" style="animation-delay:.1s">I love giving my thoughts a real frame</h1>
+<p class="in" style="animation-delay:.2s">Creating is how I understand the world. I take an idea out of my head, give it a real frame, and let every test, failure and rebuild teach me something. Every machine that finally works is paid for by the ones that did not.</p>
+<div class="btns in" style="animation-delay:.3s"><a class="btn" href="#projects">See my work <b>&rarr;</b></a><a class="btn" data-ext href="https://www.linkedin.com/in/miraz-al-hyder-609492351" target="_blank" rel="noopener noreferrer">LinkedIn <b>&rarr;</b></a></div>
+</div>
+<div class="circ in" style="animation-delay:.2s"><label class="ph" data-id="me"><input type="file" accept="image/*"><span>Tap to add<br>your portrait</span></label></div>
+</div></div>
+<div class="big in" style="animation-delay:.4s">Miraz Al Hyder</div>
+</header>
+<div class="wrap"><div class="pills rv">
+<div class="pill"><b><i data-n="1">1</i>st</b><span>place in Asia, the result our Merch Rover team worked hardest for</span></div>
+<div class="pill"><b><i data-n="3">3</i>rd</b><span>place worldwide at the same international rover competition</span></div>
+<div class="pill"><b><i data-n="7">7</i>+</b><span>competitions and fairs entered, each one a lesson in humility</span></div>
+<div class="pill"><b><i data-n="5">5</i>+</b><span>machines carried from a blank page to a working prototype</span></div>
+</div></div>
+<section id="about"><div class="wrap"><div class="eyebrow">My story</div><h2 class="t rv">Where it began, and what it cost</h2>
+<div class="two rv"><div><p>My journey began in 2017 with a question that would not leave me alone: could a robot stand beside a person on the worst day of their life? The Helping Robot I built, designed to guide people to safety and call for help, was only a demonstration, yet it taught me that engineering is most meaningful when it protects people.</p>
+<p>Since then I have learned that building is mostly persistence. Chassis flex, sensors misread, motors stall, and a design that looked flawless on screen can fail on its first run. I now return to the bench the next morning.</p>
+<p>On the Merch Rover project I carried that mindset into a team working under real pressure. Finishing 1st in Asia and 3rd globally was proof that discipline, trust and endurance build winning machines far more reliably than talent alone.</p></div>
+<div class="quote"><i>&ldquo;</i><h3>Every failure is a measurement, not a verdict.</h3><small>MIRAZ AL HYDER</small></div></div></div></section>
+<section id="projects" class="dk sec"><div class="wrap"><div class="eyebrow">Selected work</div><h2 class="t rv">Machines I have built</h2><p class="sub rv">Every project began as a fragile idea on paper. The photographs show the real hands, wires and late hours behind each one.</p><div class="grid" id="g-projects"></div></div></section>
+<section id="cad"><div class="wrap"><div class="eyebrow">On the screen first</div><h2 class="t rv">CAD designs from Fusion</h2><p class="sub rv">A robot is first built in my head, then on a screen. These models show the thinking that happens before anything is cut or welded.</p><div class="grid" id="g-cad"></div></div></section>
+<section id="awards" class="dk sec"><div class="wrap"><div class="eyebrow">Proving ground</div><h2 class="t rv">Competitions and awards</h2><p class="sub rv">Every start line was an honest test of my work. Some results made me proud, and every one made me better.</p><div class="grid" id="g-awards"></div></div></section>
+<section id="experience"><div class="wrap"><div class="eyebrow">Responsibility</div><h2 class="t rv">Judging and discipline</h2><p class="sub rv">Roles that taught me to lead, to listen, and to hold myself to a higher standard than anyone else would.</p><div class="grid" id="g-experience"></div></div></section>
+<section id="volunteering" class="gr"><div class="wrap"><div class="eyebrow">Giving back</div><h2 class="t rv">Community and volunteering</h2><p class="sub rv">Skill means little if it serves only the person who owns it. These are the places where I tried to be useful.</p><div class="grid" id="g-volunteering"></div></div></section>
+<section id="contact" class="dk sec cta"><div class="wrap"><div class="eyebrow">Contact</div><h2 class="t rv" style="margin-top:18px">Reach out if the problem is hard</h2><p class="rv">I am looking for internships and teams where I can keep learning and contribute to real robotics work. I bring patience, a high tolerance for failure and genuine gratitude for the chance to build.</p><div class="btns rv"><a class="btn" href="mailto:mirazalhyder@gmail.com">mirazalhyder@gmail.com <b>&rarr;</b></a><a class="btn" data-ext href="https://www.linkedin.com/in/miraz-al-hyder-609492351" target="_blank" rel="noopener noreferrer">LinkedIn <b>&rarr;</b></a><button class="btn" id="copy" type="button">Copy email <b>&rarr;</b></button></div></div></section>
+<footer>© 2026 Miraz Al Hyder · Dhaka, Bangladesh</footer>
+<script>
+/* ===== EDIT YOUR TEXT HERE: projects, awards, experience and volunteering cards ===== */
+var D={projects:[
+{id:"p1",f:1,t:"Merch Rover: Mechanical Subsystem",m:"Mechanical Subsystem Engineer, July 2025 to present",d:"From the first CAD sketch to the final bolt, I helped shape the rover's mechanical subsystem. The deadlines were unforgiving and the technical problems were complex, yet our team held together. Placing 1st in Asia and 3rd globally remains the proudest moment of my journey so far.",g:["CAD","Fabrication","Structural troubleshooting"]},
+{id:"p2",t:"Autonomous Line-Following Robot",d:"A robot that reads the floor and refuses to lose the line. I engineered the custom chassis, integrated IR sensors, DC motors and a motor controller, and tuned the system until its motion was smooth and decisive. It showed me how a tiny sensor error becomes a large mistake on the track.",g:["IR sensors","Embedded control","Hardware design"]},
+{id:"p3",t:"Smart Soccer-Playing Robot",d:"A remote-controlled SoccerBot built around a microcontroller, motor driver and battery system inside a custom frame. Making it fast, stable and responsive meant balancing power, weight and control, and that balance is the part of engineering I enjoy most.",g:["Microcontroller","Motor driver","System integration"]},
+{id:"p4",t:"Helping Robot Model",m:"July 2017 to March 2018",d:"My first serious idea: a machine that stays calm when people cannot. It moves, communicates, gathers information online, guides people to safety and calls for help. Its purpose was simple and deeply personal: to help save lives.",g:["Robotics","IoT"]},
+{id:"p5",t:"Auto Energy Generation System",m:"January to March 2018",d:"Every footstep and passing vehicle carries energy that is usually wasted. This prototype converts that pressure into electricity to power lights, charge batteries and run small machines, proof that a clean idea can begin with something very simple.",g:["Clean energy","Prototype"]}],
+cad:[
+{id:"c1",t:"Merch Rover subsystem",m:"Designed in Fusion",d:"The mechanical subsystem as a CAD model, resolved on screen before any part was cut.",g:["Fusion","CAD"]},
+{id:"c2",t:"SoccerBot frame",m:"Designed in Fusion",d:"The custom frame that carries the motors, driver and battery.",g:["Fusion","Frame design"]},
+{id:"c3",t:"Line-following chassis",m:"Designed in Fusion",d:"A compact chassis shaped for stable, uninterrupted tracking.",g:["Fusion","Chassis"]}],
+awards:[
+{id:"a1",t:"Line Following Robot Competition",m:"MIST, 27 November 2025",d:"A demanding course that rewarded precision. I designed, built and programmed the robot, and every run taught me something the code could not."},
+{id:"a2",t:"Line Following Robot Competition",m:"Institute of Science and Technology, 11 October 2025",d:"Sensors, motors and mechanical design had to work as a single system under the pressure of a live competition."},
+{id:"a3",t:"Robotronics Fest 2025",m:"Dhaka University, 10 August 2025",d:"My SoccerBot faced real opponents, and the experience sharpened my sense of design, sensing, motor control and teamwork."},
+{id:"a4",t:"MechaSprint, Traction Competition",m:"BRAC University, 2025",d:"A fast, unforgiving contest in which my SoccerBot stood against strong teams and my preparation was tested."},
+{id:"a5",t:"5th International RoboTech Olympiad 2025",m:"RoboTech Valley and Uttara University",d:"Competing on an international stage was humbling and motivating at once. It showed me how far I still want to go."},
+{id:"a6",t:"1st Place, Line Following Robot",m:"United International University, EEE Day",d:"First place for an autonomous line-following robot that I designed, built and programmed myself, a win earned through every part of the process."},
+{id:"a7",t:"2nd Place, Science & ICT Fair 2018",m:"Sristy Education Family, 29 March 2018",d:"Second place for a project that joined science and technology, and my first experience of presenting an idea with conviction."}],
+experience:[
+{id:"e1",t:"Competition Judge, Fibonacci International Robot & STEM Olympiad",m:"2026",d:"Being trusted to judge international teams was a responsibility I took seriously. I examined technical concepts, assessed mechanical and structural designs and scored live presentations on innovation, practicality and problem-solving, knowing that every score reflected a team's hard work."},
+{id:"e2",t:"Bangladesh National Cadet Corps (BNCC)",m:"Mymensingh, March 2022 to June 2023",d:"Army-style training demanded discipline, endurance and accountability. It taught me to lead calmly under pressure, and the Battalion Camp on 31 January 2023 tested those lessons directly."}],
+volunteering:[
+{id:"v1",t:"Global SDG Youth Summit",m:"14 December 2024",d:"I helped organize the event and welcome participants, contributing in a small but sincere way to the UN Sustainable Development Goals."},
+{id:"v2",t:"UIU Project Showcase",m:"United International University",d:"I supported presenters, guided visitors and coordinated the flow of the day so that every team could present with confidence."},
+{id:"v3",t:"Traffic control and disaster response",m:"Dhaka, June 2024 to present",d:"With my school I serve at parades, tree plantings and clean-ups, because a greener and safer community is built by ordinary people showing up."},
+{id:"v4",t:"School activities",m:"Jamalpur, 2012 to 2020",d:"For eight years I joined environmental and cultural programs that shaped my values long before I wrote my first line of code."}]};
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function pw(id,l){return '<div class="pw"><label class="ph" data-id="'+id+'"><input type="file" accept="image/*"><span>'+l+'</span></label><div class="gal" data-id="'+id+'"><label class="addmore">+ more photos<input type="file" accept="image/*" multiple></label></div></div>'}
+Object.keys(D).forEach(function(k){document.getElementById("g-"+k).innerHTML=D[k].map(function(c){
+return '<article class="card rv'+(c.f?' feat':'')+'">'+pw(c.id,k=="cad"?"add a Fusion<br>render here":"add a photo<br>of this work")+'<div class="cb"><h3>'+esc(c.t)+'</h3>'+(c.m?'<div class="m">'+esc(c.m)+'</div>':'')+'<p>'+esc(c.d)+'</p>'+(c.g?'<div class="tags">'+c.g.join(' / ')+'</div>':'')+'</div></article>'}).join("")});
+function show(l,u){var i=l.querySelector("img");if(!i){i=document.createElement("img");i.alt="Photo";l.appendChild(i)}i.src=u;l.classList.add("has")}
+function shrink(f,w,q,cb){var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){var k=Math.min(1,w/im.width),c=document.createElement("canvas");c.width=im.width*k;c.height=im.height*k;c.getContext("2d").drawImage(im,0,0,c.width,c.height);cb(c.toDataURL("image/jpeg",q))};im.src=r.result};r.readAsDataURL(f)}
+document.querySelectorAll(".ph").forEach(function(l){var id="ph-"+l.dataset.id;try{var s=localStorage.getItem(id);if(s)show(l,s)}catch(e){}
+l.querySelector("input").addEventListener("change",function(e){var f=e.target.files[0];if(f)shrink(f,900,.8,function(u){show(l,u);try{localStorage.setItem(id,u)}catch(e){}})})});
+document.querySelectorAll(".gal").forEach(function(g){var id="gl-"+g.dataset.id,arr=[],main=g.parentNode.querySelector(".ph");try{arr=JSON.parse(localStorage.getItem(id)||"[]")}catch(e){}
+function draw(){g.querySelectorAll(".th").forEach(function(n){n.remove()});var add=g.querySelector(".addmore");arr.forEach(function(u){var b=document.createElement("button");b.type="button";b.className="th";b.style.backgroundImage="url("+u+")";b.setAttribute("aria-label","Show photo");b.onclick=function(){show(main,u)};g.insertBefore(b,add)})}
+draw();g.querySelector("input").addEventListener("change",function(e){Array.prototype.slice.call(e.target.files,0,6).forEach(function(f){shrink(f,700,.75,function(u){arr.push(u);arr=arr.slice(-6);draw();try{localStorage.setItem(id,JSON.stringify(arr))}catch(e){}})});e.target.value=""})});
+var bar=document.getElementById("bar");addEventListener("scroll",function(){var h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%"},{passive:true});
+document.querySelectorAll("[data-n]").forEach(function(e){e.textContent="0"});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("show");e.target.querySelectorAll("[data-n]").forEach(function(el){var n=+el.dataset.n,i=0,t=setInterval(function(){i++;el.textContent=i;if(i>=n)clearInterval(t)},n>3?110:260)});io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll(".rv").forEach(function(e){io.observe(e)});
+document.getElementById("copy").onclick=function(){var b=this;try{navigator.clipboard.writeText("mirazalhyder@gmail.com").then(function(){b.firstChild.textContent="Copied "})}catch(e){}};
+document.querySelectorAll("a[data-ext]").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();var w=null;try{w=window.open(a.href,"_blank")}catch(x){}
+if(w){try{w.opener=null}catch(x){}return}
+try{navigator.clipboard.writeText(a.href)}catch(x){}
+var t=document.createElement("div");t.textContent="Your browser blocked the new tab. LinkedIn link copied, paste it in the address bar.";t.style.cssText="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1d1d1d;color:#fff;padding:14px 20px;border-left:4px solid #e5603b;font:600 14px Inter,sans-serif;z-index:60;max-width:90vw";document.body.appendChild(t);setTimeout(function(){t.remove()},5000)})});
+(function(){var els=[].slice.call(document.querySelectorAll(".tag,.hero h1,.hero p,h2.t,.sub,.eyebrow,.two p,.quote h3,.quote small,.pill span,.cb h3,.cb .m,.cb p,.cta p,footer"));
+els.forEach(function(e,i){try{var v=localStorage.getItem("tx-"+i);if(v!==null)e.textContent=v}catch(x){}});
+var bar=null,on=false;
+function build(){if(bar)return;bar=document.createElement("div");bar.className="edbar";
+var b=document.createElement("button");b.type="button";b.textContent="Edit text";
+var r=document.createElement("button");r.type="button";r.className="g";r.textContent="Reset text";
+b.onclick=function(){on=!on;els.forEach(function(e,i){e.contentEditable=on?"true":"false";if(!on){try{localStorage.setItem("tx-"+i,e.textContent)}catch(x){}}});b.textContent=on?"Save text":"Edit text";if(!on){b.textContent="Saved";setTimeout(function(){b.textContent="Edit text"},1500)}};
+r.onclick=function(){if(!confirm("Remove all your text edits?"))return;try{els.forEach(function(e,i){localStorage.removeItem("tx-"+i)})}catch(x){}location.reload()};
+bar.appendChild(b);bar.appendChild(r);document.body.appendChild(bar)}
+function chk(){build()}
+addEventListener("hashchange",chk);chk()})();
+</script>
+</body>
+</html>
